@@ -3,11 +3,15 @@ import elephantGirlLogo from '../assets/elephant_girl_logo.png'
 import ColorModeSwitch from './ColorModeSwitch'
 import SearchInput from './SearchInput'
 
-const Navbar = () => {
+interface Props{
+  onSearch: (searchText: string) => void;
+}
+
+const Navbar = ({onSearch}: Props) => {
   return (
     <HStack  padding={"2rem"}>
         <Image src={elephantGirlLogo} boxSize={'100px'}/>
-        <SearchInput/>
+        <SearchInput onSearch={onSearch}/>
         <ColorModeSwitch/>
     </HStack>
   )
