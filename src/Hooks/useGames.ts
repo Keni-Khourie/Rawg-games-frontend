@@ -18,7 +18,8 @@ export interface Game{
     name: string;
     background_image: string;
     metacritic:number;
-    parent_platforms: {platform: Platform}[]
+    parent_platforms: {platform: Platform}[];
+    rating_top:number;
     //The parent_platform is an array of objects where each object contains a key named platform whose value is an object with the Platform shape/properties). Basically there is a neste object situation going on here. eg[{platform: {id:1, name: 'sara', slug: 'sluggish'}}, {platform: {id:2, name: "di", slug:"this"}}]
 }
 
